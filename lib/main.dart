@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:prac/login_page.dart';
+import 'package:prac/routes.dart';
 import 'package:prac/splash_screen.dart';
 
 void main() {
@@ -12,9 +14,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SplashScreen(),
-      // initialRoute: SplashScreen,
-      // routes: SplashScreen ,
+      initialRoute: MyRoutes.loginpage,
+      routes: {
+        "/": (context) => SplashScreen(),
+        MyRoutes.loginpage: (context) => LoginPage(),
+        MyRoutes.splashscreen: (context) => SplashScreen(),
+      },
     );
   }
 }
+
+// git push --set-upstream origin day1
