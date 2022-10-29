@@ -173,9 +173,14 @@ class _LoginPageState extends State<LoginPage> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      Image.asset(
-                        "asset/images/splash_logo.png",
+                      Icon(
+                        Icons.cast_for_education_rounded,
+                        color: Colors.orange,
+                        size: 100,
                       ),
+                      // Image.asset(
+                      //   "asset/images/splash_logo.png",
+                      // ),
                       SizedBox(height: 50),
                       buildEmail(),
                       SizedBox(
